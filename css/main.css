@@ -1,0 +1,229 @@
+/* reset */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos generales */
+
+body{
+    background-color: rgb(228, 228, 228);
+    font-family:  'Roboto', sans-serif;
+}
+
+
+.titulo{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* estilos del main */
+
+
+.carruseles{
+    margin: 2rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h2{
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+h1{
+    font-size: 2.6rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+.introduccion{
+    margin: 1.5rem;
+}
+
+.barra-nav{
+    background-color: rgb(207, 203, 203);
+}
+
+#ocultar{
+    display: none;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section div p{
+    text-align: center;
+}
+
+/* media queries*/
+
+@media screen and (min-width:768px){
+
+    #ocultar{
+        display: block;
+        padding: 1rem;
+        margin-right: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 0.05fr 0.05fr;
+        grid-template-areas:
+        "armazones necesidad"
+        "armazones sol";
+        justify-content: center;
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    main .carruseles{
+        display: none;
+    }
+
+    #armazones{
+        grid-area: armazones;
+        width: 70%;
+
+    }
+
+    #playa{
+        grid-area: sol;
+        width: 90%;
+        height: 90%;
+    }
+
+    #necesidad{
+        grid-area: necesidad;
+        text-align: center;
+    }
+
+}
+
+.nav-item:hover{
+    font-weight: bold;
+        
+}
+
+
+/* estilos del footer*/
+
+footer{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.derechos{
+    margin-top: 1rem;
+}
+
+#instagram{
+    width: 30px;
+    height: 30px;
+}
+
+#facebook{
+    width: 30px;
+    height: 30px;
+}
+
+section{
+    margin-top: 2rem;
+}
+ 
+
+
+/* estilos del html productos*/
+
+#contenedor-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-text{
+    font-weight: bold;
+}
+
+main p span{
+    font-weight: bold;
+    display: block;
+}
+
+
+#parrafo-1, #parrafo-2, #parrafo-3{
+    display: none;
+}
+
+
+@media screen and (min-width:768px){
+
+    #parrafo-1, #parrafo-2, #parrafo-3{
+        display: block;
+    }
+
+    #contenedor-productos{
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: 0.2fr 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+        gap: 1rem;
+        grid-template-areas: 
+        "productos-titulo productos-titulo"
+        "card-1 parrafo-1"
+        "parrafo-2 card-2"
+        "card-3 parrafo-3";
+    }
+
+    #productos-titulo{
+        grid-area: productos-titulo;
+    }
+
+    #card-1{
+        grid-area: card-1;
+    }
+
+    #parrafo-1{
+        grid-area: parrafo-1;
+    }
+
+    #card-2{
+        grid-area: card-2;
+    }
+
+    #parrafo-2{
+        grid-area: parrafo-2;
+    }
+
+    #card-3{
+        grid-area: card-3;
+    }
+
+    #parrafo-3{
+        grid-area: parrafo-3;
+    }
+       
+}
+
+
+
+/* estilos del html como-comprar*/
+
+#main-comocomprar{
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+main ol li{
+    text-align: left;
+}
